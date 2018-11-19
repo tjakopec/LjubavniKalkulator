@@ -10,10 +10,6 @@ package ffos;
  */
 public class Ljubav {
 
-	private static final String KALKULIRAM = "Kalkuliram ljubav (tražim osobu)";
-	private static final String REZULTAT = "Pronašao 1 rezultat: Marija Zimska <mzimska@ffos.hr>";
-	private static final char TRAZENJE = '.';
-	private static final int BROJ_PONAVLJANJA = 7;
 
 	/**
 	 * Ovo je metoda koju poziva operativni sustav
@@ -21,18 +17,15 @@ public class Ljubav {
 	 * @return tipa void pa ne vraća vrijednost.
 	 */
 	public static void main(String[] args) {
-		System.out.println(KALKULIRAM);
-		for (int i = 0; i < BROJ_PONAVLJANJA; i++) {
-			System.out.print(TRAZENJE + " ");
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+		if (args[0].toLowerCase().equals("marija") && args[1].toLowerCase().equals("zvonko")) {
+			System.out.println("Volite se 98 %");
+		}else {
+			System.out.println("Volite se " + Math.random() + " %");
 		}
-		System.out.println("\n" + REZULTAT);
 	}
 
 }
+
+
 
 
